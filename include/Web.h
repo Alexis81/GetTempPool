@@ -56,21 +56,9 @@ void notFound(AsyncWebServerRequest *request)
 ------------------------------------------------------------------------------*/
 void serverRoute()
 {
-  // Route to load style.css file
-  server.on("/css/style.css", HTTP_GET, [](AsyncWebServerRequest *request)
-            { 
-              request->send(SPIFFS, "/css/style.css", "text/css"); });
+  // Servir les fichiers statiques (css et javascript)
+  server.serveStatic("/", SPIFFS, "/");
 
-  // Route to load js file
-    server.on("/js/gauge.min.js", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send(SPIFFS, "/js/gauge.min.js", "text/javascript"); });
-
-  server.on("/js/gauge.min.js.map", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send(SPIFFS, "/js/gauge.min.js.map", "text/javascript"); });
-
-  server.on("/js/script.js", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send(SPIFFS, "/js/script.js", "text/javascript"); });
-    
   // Page d'acceuil
   server.on("/index.html", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send(SPIFFS, "/index.html", "text/html"); });
@@ -112,6 +100,6 @@ void serverRoute()
     server.onNotFound(notFound);
 
   // Démarre le serveur Web
-  AsyncElegantOTA.begin(&server); // Start AsyncElegantOTA
+  AsyncElegantOTA.begin(&server);   // Start AsyncElegantOTA
   server.begin();
 }

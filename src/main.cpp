@@ -14,6 +14,7 @@
                    /index.html -> Page d'affichage de la température
                    /temp -> Un Json de cette forme {time: 188888228882, eau: 25.81, rssi: -73}
                    /scan -> La liste des Wifi disponibles.
+                   /update -> Mise à jour en OTA (fichier : firmware.bin ou spiffs.bin)
 
 - Version : 1.0.0
 --------------------------------------------------------------------------------------------------------*/
@@ -22,6 +23,7 @@
 #include <WifiM5.h>
 #include "Web.h"
 #include "Ds18b20.h"
+
 
 
 void setup()
@@ -58,6 +60,7 @@ void setup()
   M5.Lcd.println("");
   M5.Lcd.println("- Connexion Wifi");
 
+  //-- Gestion du Wifi -----------------------------------------------------------
   WiFi.disconnect(true);
 
   delay(1000);
@@ -151,6 +154,5 @@ void loop()
   #ifdef Debug
     Serial.println(temp_eau);
   #endif
-
   delay(500);
 }

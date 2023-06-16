@@ -1,4 +1,5 @@
 const signal = document.getElementById("signal")
+const Rssi = document.getElementById("Rssi")
 
 function getTemperature() {
   var xhr = new XMLHttpRequest();
@@ -9,6 +10,7 @@ function getTemperature() {
         var temperature = response.eau;
         var rssi = parseInt(response.rssi);
         var texteRSSI = evaluerRSSI(rssi)
+        Rssi.innerHTML = rssi + "dBm"
         console.log("Température : " + temperature);
         console.log("Wifi RSSI.  : " + rssi + " - " + (texteRSSI));
         gauges[0].value = parseFloat(temperature)

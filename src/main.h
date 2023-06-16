@@ -6,7 +6,7 @@ Version du programme
 /*-------------------------------------------------------------
 Serial print
 -------------------------------------------------------------*/
-#define Debug   true        // Mode debug par Serial print
+#define Debug   false        // Mode debug par Serial print
 
 /*-------------------------------------------------------------
 Information Wifi
