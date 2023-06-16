@@ -8,3 +8,4 @@ Un serveur Web est à l'écoute sur le port 8090, pour servir :\
     + /index.html -> Page d'affichage de la température.\
     + /temp -> Un Json de cette forme {time: 188888228882, eau: 25.81, rssi: -73}\
     + /scan -> La liste des Wifi disponibles.\
+    + /update -> Mise à jour en OTA (fichier : firmware.bin ou spiffs.bin).
