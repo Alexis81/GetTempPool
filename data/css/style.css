@@ -1,0 +1,65 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    html,
+    body {
+      height: 100%;
+      text-align: center;
+      place-items: center;
+      background: #0394f5;
+    }
+
+    #Titre {
+      color : white;
+      font-size: 40px;
+    }
+
+
+    .copyrighttext {
+      font-family: LTcom, sans-serif;
+      font-size: smaller;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      margin: 0;
+      padding: 10px;
+      color: white;
+      font-size: small;
+      z-index: 1000; /* Assurez-vous que le texte apparaît au-dessus des autres éléments */
+    }
+
+    .container {
+      position: relative;
+  }
+
+
+  .wave {
+    display: inline-block;
+    border: 5px solid transparent;
+    border-top-color: currentColor;
+    border-radius: 50%;
+    border-style: solid;
+    margin: 5px;
+  }
+    
+    
+  .waveStrength-3 .wv4.wave,
+  .waveStrength-2 .wv4.wave,
+  .waveStrength-2 .wv3.wave,
+  .waveStrength-1 .wv4.wave,
+  .waveStrength-1 .wv3.wave,
+  .waveStrength-1 .wv2.wave {
+    border-top-color: #eee;
+  }  
+
+  #signal {
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+  
+  

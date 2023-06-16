@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Piscine - V1.0</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+    <h1 id="Titre">Piscine Guillaume</h1>
+    <br>
+    <br>
+
+    <div class="waveStrength-4" id="signal">
+        <div class="wv4 wave" style="">
+          <div class="wv3 wave" style="">
+            <div class="wv2 wave" style="">
+              <div class="wv1 wave">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- https://github.com/Mikhus/canvas-gauges -->
+    <canvas data-type="radial-gauge" data-major-ticks="-20, -10, 0, 10, 20, 30, 40" data-type="radial-gauge"
+        data-title="Eau" data-units="°C" data-width="500" data-height="500" data-value-int="0" data-value-dec="2"
+        data-min-value="-20" data-max-value="40" data-highlights="true"
+      ></canvas>
+    </div>
+
+    <div class="copyrighttext">
+        Version : 1.0.0<br />
+        Copyright © - Alexis OLIVAN
+    </div>
+
+    <!-- partial -->
+    <script async src='/js/gauge.min.js'></script>
+    <script src="/js/script.js"></script>
+
+
+</body>
+
+</html>
