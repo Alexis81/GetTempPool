@@ -1,5 +1,6 @@
 const signal = document.getElementById("signal")
 const Rssi = document.getElementById("Rssi")
+const Barre = document.querySelectorAll(".wave")
 
 function getTemperature() {
   var xhr = new XMLHttpRequest();
@@ -29,18 +30,30 @@ function evaluerRSSI(rssi) {
   if (rssi <= -90) {
     signal.className = ''
     signal.classList.add("waveStrength-1")
+    Barre.forEach(function(element) {
+      element.style.color = 'red';
+    });
     return "Unsuable"
   } else if (rssi <= -80) {
     signal.className = ''
     signal.classList.add("waveStrength-2")
+    Barre.forEach(function(element) {
+      element.style.color = 'yellow';
+    });
     return "Not Good"
   } else if (rssi <= -70) {
     signal.className = ''
     signal.classList.add("waveStrength-3")
+    Barre.forEach(function(element) {
+      element.style.color = 'blue';
+    });
     return "Okay"
   } else if (rssi <= -65) {
     signal.className = ''
     signal.classList.add("waveStrength-4")
+    Barre.forEach(function(element) {
+      element.style.color = 'green';
+    });
     return "Amazing"
   }
 }
